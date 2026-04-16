@@ -38,7 +38,7 @@ public class Sms extends BusModBase implements Handler<Message<JsonObject>> {
 	@Override
 	public void start(final Promise<Void> startPromise){
 		super.start();
-		vertx.eventBus().consumer(config.getString("address", "entcore.sms"), this);
+		vertx.eventBus().localConsumer(config.getString("address", "entcore.sms"), this);
 		implementations = ServiceLoader.load(SmsProvider.class);
 		providersList = config.getJsonObject("providers");
 		SmsMetricsRecorderFactory.init(vertx, config)
