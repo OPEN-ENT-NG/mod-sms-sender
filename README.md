@@ -48,3 +48,6 @@ Specific json configuration :
 ```
 
 Check the following link for more details on the API : [OVH API](https://eu.api.ovh.com/)
+
+
+Ce dépôt est un miroir officiel du dépôt Edifice : https://github.com/edificeio/mod-sms-sender
